@@ -121,7 +121,7 @@ a:hover {
     position: absolute;
     animation: fadeIn 2.5s forwards ease;
     top: 22vh;
-    display: block;
+    display: block;  
     
 
 }
