@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: black;
+}
+
+
+/*nav*/
+nav {
+    float: right;
+    margin: 50px;
+}
+
+
+li {
+    list-style-type: none;
+    display: inline-block;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+a:link,
+a:visited,
+a:active {
+    color: rgb(185, 185, 185);
+}
+
+a:hover {
+    color: rgb(255, 255, 255);
+}
+
+/*logo animation*/
+.container {
+    perspective: 1;
+    position: absolute;
+    margin-left: 10vw;
+    margin-top: 5vh;
+}
+
+.container:hover .hover-animation {
+    transform: rotateY(180deg);
+}
+
+.hover-animation {
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.logo-front,
+.logo-back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo-front {
+    background: no-repeat center;
+    z-index: 2;
+}
+
+.logo-back {
+    background: no-repeat center;
+    transform: rotateY(180deg);
+    left: -60px;
+}
+
+/*logo animation end*/
+/*nav*/
+
+
+/*section animation*/
+
+.pilar1 {
+    position: absolute;
+    left: -600px;
+    -webkit-animation: pilar1 1s forwards ease;
+    -webkit-animation-delay: .5s;
+    animation: pilar1 1s forwards ease;
+    animation-delay: .5s;
+    top: 25vh;
+}
+
+@-webkit-keyframes pliar1 {
+    100% { left: 0; }
+}
+
+@keyframes pilar1 {
+    100% { left: 15vh; }
+}
+
+.pilar2 {
+    position: absolute;
+    right: -600px;
+    -webkit-animation: pilar2 1s forwards ease;
+    -webkit-animation-delay: .5s;
+    animation: pilar2 1s forwards ease;
+    animation-delay: .5s;
+    top: 25vh;
+}
+
+@-webkit-keyframes pliar2 {
+    100% { right: 0; }
+}
+
+@keyframes pilar2 {
+    100% { right: 15vh; }
+}
+
+
+.circle {
+    position: absolute;
+    animation: fadeIn 2.5s forwards ease;
+    top: 22vh;
+    display: block;
+    
+
+}
+
+@keyframes fadeIn {
+    0% { opacity:0; }
+    66% { opacity:0; }
+    100% { opacity:1; }
+}
+
+
+
+/*section intro*/
+.intro {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    margin-top: 75vh;
+    position: absolute;
+    color: rgb(185, 185, 185);
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.3vw;
+}
+
+.hover-border {
+    position: relative;
+}
+
+.hover-border::after {
+    content: '';
+    width: 17%;
+    height: 5px;
+    position: absolute;
+    background-color: rgb(185, 185, 185);
+    bottom: 0%;
+    left: 63.5%;
+    border-radius: 10px;
+    transition: all 500ms ease;
+}
+
+.hover-border:hover::after {
+    left: 36.5%;
+    width: 13.5%;
+    background-color: rgb(243, 242, 242);
+}  
