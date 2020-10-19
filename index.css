@@ -10,9 +10,24 @@
 }
 
 body {
-    background-color: #59848B;
+    background-color: white;
 }
 
+#background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 65%;
+    height: 100vh;
+    background-color: #59848B;
+    z-index: -1;
+    background-image: linear-gradient(45deg, transparent 20%, rgba(0, 0, 0, 0.055) 25%, transparent 25%), 
+    linear-gradient(-45deg, transparent 20%, rgba(0, 0, 0, 0.055) 25%, transparent 25%), 
+    linear-gradient(-45deg, transparent 75%, rgba(0, 0, 0, 0.055) 80%, transparent 0);
+    background-size: 90px 90px, 90px 90px;
+}
+
+/*#59848B;*/
 
 /*nav*/
 nav {
@@ -26,18 +41,18 @@ li {
     list-style-type: none;
     display: inline-block;
     font-family: 'Rubik', sans-serif;
-    font-size: 1.2em;
+    font-size: 1.4em;
     padding: 10px;
 }
 
 a:link,
 a:visited,
 a:active {
-    color: rgb(255, 255, 255);
+    color: #406268;
 }
 
 a:hover {
-    color: rgb(224, 224, 224);
+    color: #5ea4af;
 }
 
 
@@ -126,6 +141,7 @@ a:hover {
      animation: drop 2s ease;
      right: -8vh;
      position: relative;
+     z-index: 2;
  }
 
  @keyframes drop {
@@ -140,38 +156,11 @@ a:hover {
      }
  }
 
-.circle {
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    z-index: -1;
-    opacity: 0.6;
-    height: 70%;
-}
-
-.circle2 {
-    position: absolute;
-    top: 27.5%;
-    right: 35.8%;
-    z-index: -1;
-    height: 68%;
-    opacity: 0.4;
-}
-
-.circle3 {
-    position: absolute;
-    top: 50%;
-    right: 70%;
-    z-index: -1;
-    height: 50%;
-    opacity: 0.3;
-}
-
 footer {
     color: rgba(236, 229, 229, 0.388);
     padding: 55px;
     font-family: 'Poppins', sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     margin-left: 105px;
 }
 
@@ -233,9 +222,7 @@ footer span {
         height: 60vh;
         right: 0;
     }
-    .circle, .circle2, .circle3 {
-        opacity: 0;
-    }
+ 
 
     footer {
         text-align: center;
@@ -243,6 +230,24 @@ footer span {
     }
 
 }
+
+/*second presentation on landing page */
+
+.second_presentation {
+    display: flex;
+}
+
+.second_presentation img {
+    height: 50vh;
+    position: relative;
+    left: 25vh;
+    margin-top: 10vh;
+}
+
+
+
+
+
 
 
 /* about me page */
